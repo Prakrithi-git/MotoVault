@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MotoVault | Bike Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="#" onclick="showHome()">MOTO<span>VAULT</span></a>
+   <nav id="navLinks" class="hidden">
+  <button onclick="showHome()">Home</button>
+  <button onclick="showWishlist()">Wishlist</button>
+  <button onclick="showCart()">Cart <span id="cartCount">0</span></button>
+  <button onclick="showOrders()">My Orders</button>
+  <button onclick="logout()">Logout</button>
+</nav>
+  </header>
+
+  <main>
+    <!-- LOGIN AND REGISTRATION -->
+    <section id="authSection" class="auth-section">
+      <div class="auth-card">
+        <h1>Welcome to MotoVault</h1>
+        <p class="muted">Find the bike that matches your ride.</p>
+
+        <div class="auth-tabs">
+          <button id="loginTab" class="active" onclick="showLogin()">Login</button>
+          <button id="registerTab" onclick="showRegister()">Register</button>
+        </div>
+
+        <form id="loginForm">
+          <label>Email</label>
+          <input id="loginEmail" type="email" placeholder="Enter your email" required>
+
+          <label>Password</label>
+          <input id="loginPassword" type="password" placeholder="Enter password" required>
+
+          <button class="primary-btn" type="submit">Login</button>
+        </form>
+
+        <form id="registerForm" class="hidden">
+          <label>Full name</label>
+          <input id="registerName" type="text" placeholder="Your name" required>
+
+          <label>Email</label>
+          <input id="registerEmail" type="email" placeholder="Your email" required>
+
+          <label>Password</label>
+          <input id="registerPassword" type="password" minlength="6"
+                 placeholder="At least 6 characters" required>
+
+          <button class="primary-btn" type="submit">Create Account</button>
+        </form>
+
+        <p id="authMessage" class="message" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- STORE DASHBOARD -->
+    <section id="dashboard" class="hidden">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">WELCOME TO THE WORLD OF RIDING</p>
+          <h1>Your next adventure<br>starts here.</h1>
+          <p>Explore bikes, save your favourites and find your perfect ride.</p>
+          <button class="primary-btn" onclick="scrollToBikes()">Explore Bikes</button>
+        </div>
+      </div>
+
+      <div class="section-heading" id="bikeSection">
+        <div>
+          <p class="eyebrow">OUR COLLECTION</p>
+          <h2>Explore Bikes</h2>
+        </div>
+        <input id="searchInput" type="search" placeholder="Search bikes..."
+               oninput="renderBikes()">
+      </div>
+
+      <div id="bikeGrid" class="bike-grid"></div>
+    </section>
+
+    <!-- CART -->
+    <section id="cartSection" class="content-section hidden">
+      <h1>Your Shopping Cart</h1>
+      <div id="cartItems"></div>
+      <div id="cartTotal" class="total"></div>
+      <button id="checkoutBtn" class="primary-btn" onclick="placeOrder()">
+        Place Order
+      </button>
+      <p id="cartMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <!-- WISHLIST -->
+    <section id="wishlistSection" class="content-section hidden">
+      <h1>Your Wishlist</h1>
+      <div id="wishlistItems" class="bike-grid"></div>
+    </section>
+
+    <!-- ORDER HISTORY -->
+    <section id="ordersSection" class="content-section hidden">
+      <h1>Your Orders</h1>
+      <div id="orderItems"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 MotoVault. Ride with passion.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

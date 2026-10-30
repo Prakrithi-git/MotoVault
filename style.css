@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.navbar {
+  min-height: 70px;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+  gap: 20px;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #f0a500;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav button {
+  border: 0;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+}
+
+nav button:hover {
+  color: #f0a500;
+}
+
+.auth-section {
+  min-height: 78vh;
+  display: grid;
+  place-items: center;
+  padding: 30px 15px;
+  background: linear-gradient(135deg, #202020, #454545);
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  background: white;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px #0003;
+}
+
+.auth-card h1 {
+  font-size: 27px;
+  margin-bottom: 8px;
+}
+
+.muted {
+  color: #777;
+  margin-bottom: 22px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #ddd;
+}
+
+.auth-tabs button {
+  width: 50%;
+  border: 0;
+  background: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.auth-tabs button.active {
+  color: #d58e00;
+  border-bottom: 3px solid #f0a500;
+}
+
+form label {
+  display: block;
+  margin: 14px 0 7px;
+  font-weight: bold;
+}
+
+form input, #searchInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  outline-color: #f0a500;
+}
+
+.primary-btn {
+  display: inline-block;
+  background: #f0a500;
+  color: #111;
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 20px;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.primary-btn:hover {
+  background: #d58e00;
+}
+
+.auth-card .primary-btn {
+  width: 100%;
+}
+
+.message {
+  margin-top: 15px;
+  color: #b04428;
+  line-height: 1.5;
+}
+
+.hero {
+  min-height: 370px;
+  display: flex;
+  align-items: center;
+  padding: 50px 8%;
+  color: white;
+  background:
+    linear-gradient(90deg, #000d, #0005),
+    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=1600")
+    center/cover;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 58px);
+  margin: 12px 0;
+}
+
+.hero p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  color: #d58e00;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.section-heading {
+  padding: 45px 7% 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+#searchInput {
+  max-width: 280px;
+  background: white;
+}
+
+.bike-grid {
+  padding: 0 7% 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.bike-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #00000012;
+}
+
+.bike-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.bike-info {
+  padding: 18px;
+}
+
+.bike-info h3 {
+  margin-bottom: 8px;
+}
+
+.bike-info p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.price {
+  color: #bd7900 !important;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.card-actions button {
+  flex: 1;
+  min-width: 90px;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  font-weight: bold;
+  background: #eee;
+}
+
+.card-actions .buy-btn {
+  background: #f0a500;
+}
+
+.content-section {
+  min-height: 65vh;
+  padding: 45px 7%;
+}
+
+.content-section h1 {
+  margin-bottom: 25px;
+}
+
+.cart-row, .order-row {
+  background: white;
+  padding: 17px;
+  margin-bottom: 12px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cart-row button {
+  border: 0;
+  background: #eee;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.total {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.empty {
+  color: #777;
+  padding: 20px 0;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 22px;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  #searchInput {
+    max-width: none;
+  }
+
+  .hero {
+    min-height: 330px;
+  }
+}
